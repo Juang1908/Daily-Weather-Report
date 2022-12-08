@@ -2,7 +2,9 @@ var APIKey = "2255048fd7298045502b182ef2cef8e9";
 var searchbtn = document.getElementById("search");
 var cityArray = []
 
-
+var now = dayjs().format("dddd, MMMM D, YYYY h:mm A")
+  $("#currentDay").text(now)
+console.log(now)
 
 
 queryURL =  "https://api.openweathermap.org/data/2.5/weather?q=houston&appid=2255048fd7298045502b182ef2cef8e9"

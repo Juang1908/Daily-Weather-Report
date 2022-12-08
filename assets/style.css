@@ -9,10 +9,22 @@ body{
     font-family: 'Grenze Gotisch', cursive;
     font-family: 'Markazi Text', serif;
     font: white;
+ 
 }
 h1.title{
   color: white;
+  font-size: 50px;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 div.card.p-1{
     background-color: aqua;
+}
+
+#currentDay{
+    color: white;
+    font-size: 25px;
+
 }

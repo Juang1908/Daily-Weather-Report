@@ -15,10 +15,10 @@ Weather Dashboard Project
 
 ## Credits
 
-<!-- - https://day.js.org/ -->
+- https://day.js.org/
 
 - https://getbootstrap.com/
-<!-- - https://jquery.com/ -->
+- https://jquery.com/
 
 ## Licence
 
@@ -45,5 +45,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Screenshot
+
+![Alt text](./assets/Screenshot.jpg)
 
 ## Weblink
