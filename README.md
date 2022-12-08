@@ -4,6 +4,13 @@ Weather Dashboard Project
 
 ## Description
 
+Get current Weather condition with a simple city seach.
+Current and future conditions for that city.
+Use city name to get date, an icon representation of weather-
+conditions, the temperature, the humidity, and the wind speed.
+Future weather conditions for that city.
+5-day forecast
+
 ## Table of Contents
 
 - index.html
@@ -49,3 +56,6 @@ SOFTWARE.
 ![Alt text](./assets/Screenshot.jpg)
 
 ## Weblink
+
+https://juang1908.github.io/Daily-Weather-Report/
+https://github.com/Juang1908/Daily-Weather-Report
