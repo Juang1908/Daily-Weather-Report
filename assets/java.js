@@ -1,6 +1,6 @@
 var APIKey = "2255048fd7298045502b182ef2cef8e9";
 var searchbtn = document.getElementById("search");
-
+var cityArray = []
 
 
 
@@ -23,12 +23,29 @@ function getweather(lat,lon){
     fetch(weatherURL).then(function(response){
         return response.json();
     }).then(function(data){
+        if(!cityArray.includes(data.name)){
+            cityArray.push(data.name)
+        localStorage.setItem("cityArray", JSON.stringify(cityArray))
+        }
+        
         var weathercard =document.createElement("div")
-        weathercard.setAttribute("class", "card")
+        weathercard.setAttribute("class", "card p-1")
         var cityname =document.createElement("h2")
         cityname.setAttribute("class", "card-title")
         cityname.textContent = data.name
-        weathercard.appendChild(cityname);
+        var icon = document.createElement("img")
+        icon.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
+        cityname.appendChild(icon)
+        var temperatureEl =document.createElement("div")
+        temperatureEl.setAttribute("class","card-title")
+        temperatureEl.innerHTML = `<p>Temperature: ${Math.round(data.main.temp)} &#8457;</p>`
+        var humidityEl =document.createElement("div")
+        humidityEl.setAttribute("class", "card-title")
+        humidityEl.innerHTML = `<p>Humidity: ${data.main.humidity} &#37;</p>`
+        var windEl =document.createElement("div")
+        windEl.setAttribute("class", "card-title")
+        windEl.innerHTML = `<p>Wind-Speed: ${data.wind.speed} mph</p>`
+        weathercard.append(cityname,temperatureEl, humidityEl, windEl);
         document.getElementById("current-weather").appendChild(weathercard)
 
         console.log(data);
