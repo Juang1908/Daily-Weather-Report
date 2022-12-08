@@ -25,6 +25,7 @@ function getweather(lat,lon){
     }).then(function(data){
         if(!cityArray.includes(data.name)){
             cityArray.push(data.name)
+            // Adding to Local Storage
         localStorage.setItem("cityArray", JSON.stringify(cityArray))
         }
         
@@ -36,6 +37,7 @@ function getweather(lat,lon){
         var icon = document.createElement("img")
         icon.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
         cityname.appendChild(icon)
+        // Creating Div for Temp.Humidity.Wind
         var temperatureEl =document.createElement("div")
         temperatureEl.setAttribute("class","card-title")
         temperatureEl.innerHTML = `<p>Temperature: ${Math.round(data.main.temp)} &#8457;</p>`
@@ -51,6 +53,7 @@ function getweather(lat,lon){
         console.log(data);
     })
 }
+// City Search
 searchbtn.addEventListener("click", function(){
 var city = document.getElementById("city").value;
 console.log(city)

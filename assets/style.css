@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@300&family=Markazi+Text:wght@100;200;500;700&display=swap');
+
+body{
+    background-image: url(./wea.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    font-family: 'Grenze Gotisch', cursive;
+    font-family: 'Markazi Text', serif;
+    font: white;
+}
+h1.title{
+  color: white;
+}
+div.card.p-1{
+    background-color: aqua;
+}
